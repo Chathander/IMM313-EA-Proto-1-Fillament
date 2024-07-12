@@ -6,7 +6,10 @@ using UnityEngine.Events;
 
 public class TargetHov : MonoBehaviour
 {
-
+/// <summary>
+/// This is the main interactor for our prototype. Takes the OnMouse... native events to create a point and click
+/// like experience.
+/// </summary>
     [SerializeField] private bool isHovered;
     [SerializeField] private UnityEvent _event;
 
