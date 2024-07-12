@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: a45321e4b3cdc8946b532b2507594837, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -174,7 +174,7 @@ CapsuleCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5000001
   m_Height: 2
@@ -376,6 +376,7 @@ GameObject:
   - component: {fileID: 443413980}
   - component: {fileID: 443413979}
   - component: {fileID: 443413982}
+  - component: {fileID: 443413983}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -501,6 +502,15 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!45 &443413983
+Skybox:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443413978}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: a45321e4b3cdc8946b532b2507594837, type: 2}
 --- !u!1 &495252872
 GameObject:
   m_ObjectHideFlags: 0
@@ -556,9 +566,10 @@ GameObject:
   - component: {fileID: 559337138}
   - component: {fileID: 559337141}
   - component: {fileID: 559337142}
+  - component: {fileID: 559337143}
   m_Layer: 0
-  m_Name: LightTemp 3
-  m_TagString: Untagged
+  m_Name: LightTemp 3 (mad)
+  m_TagString: MadLight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -704,6 +715,33 @@ MonoBehaviour:
   targetTransform: {fileID: 781423703}
   basePosition: {fileID: 1105329005}
   inserted: 0
+--- !u!54 &559337143
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559337136}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &617722475
 GameObject:
   m_ObjectHideFlags: 0
@@ -869,9 +907,10 @@ GameObject:
   - component: {fileID: 672227546}
   - component: {fileID: 672227549}
   - component: {fileID: 672227550}
+  - component: {fileID: 672227551}
   m_Layer: 0
-  m_Name: LightTemp 2
-  m_TagString: Untagged
+  m_Name: LightTemp 2 (sad)
+  m_TagString: SadLight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1017,6 +1056,33 @@ MonoBehaviour:
   targetTransform: {fileID: 781423703}
   basePosition: {fileID: 816803249}
   inserted: 0
+--- !u!54 &672227551
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672227544}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &781423702
 GameObject:
   m_ObjectHideFlags: 0
@@ -1026,6 +1092,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 781423703}
+  - component: {fileID: 781423704}
+  - component: {fileID: 781423705}
   m_Layer: 0
   m_Name: LightPositionInHolder
   m_TagString: Untagged
@@ -1048,6 +1116,46 @@ Transform:
   m_Children: []
   m_Father: {fileID: 124571198}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &781423704
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781423702}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &781423705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781423702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65a70bceb42a8ec4ab03a07c12efc0b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _skybox: {fileID: 443413983}
+  happyMaterial: {fileID: 2100000, guid: 8ea50f93b1263634599ab99380485f6e, type: 2}
+  angeryMaterial: {fileID: 2100000, guid: ee7171859227a3a48bb1c6ec037eb878, type: 2}
+  sadMaterial: {fileID: 2100000, guid: 45178d919761a824290968d54c0c23d6, type: 2}
+  lightObject1: {fileID: 800046171}
+  lightObject2: {fileID: 672227550}
+  lightObject3: {fileID: 559337142}
 --- !u!1 &800046165
 GameObject:
   m_ObjectHideFlags: 0
@@ -1062,9 +1170,10 @@ GameObject:
   - component: {fileID: 800046167}
   - component: {fileID: 800046170}
   - component: {fileID: 800046171}
+  - component: {fileID: 800046172}
   m_Layer: 0
-  m_Name: LightTemp 1
-  m_TagString: Untagged
+  m_Name: LightTemp 1 (happy)
+  m_TagString: HappyLight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1208,8 +1317,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetTransform: {fileID: 781423703}
-  basePosition: {fileID: 800046166}
+  basePosition: {fileID: 908342039}
   inserted: 0
+--- !u!54 &800046172
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800046165}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &816803248
 GameObject:
   m_ObjectHideFlags: 0
@@ -2634,7 +2770,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30

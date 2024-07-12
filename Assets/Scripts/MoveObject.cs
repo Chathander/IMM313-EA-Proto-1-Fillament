@@ -8,7 +8,7 @@ public class MoveObject : MonoBehaviour
     private Transform objectTransform;
     [SerializeField] private Transform targetTransform;
     [SerializeField] private Transform basePosition;
-    [SerializeField] private bool inserted;
+    public bool inserted;
 
     private void Start()
     {
@@ -20,7 +20,7 @@ public class MoveObject : MonoBehaviour
         if (!inserted)
         {
             objectTransform.transform.position = targetTransform.position;
-            inserted = true;
+            Debug.Log("Light Inserted");
         }
     }
 
@@ -29,7 +29,9 @@ public class MoveObject : MonoBehaviour
         if (inserted)
         {
             objectTransform.transform.position = basePosition.position;
-            inserted = false;
+            Debug.Log("light return occured");
         }
     }
+
+    
 }
