@@ -1150,8 +1150,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _skybox: {fileID: 443413983}
+  baseMaterial: {fileID: 2100000, guid: a45321e4b3cdc8946b532b2507594837, type: 2}
   happyMaterial: {fileID: 2100000, guid: 8ea50f93b1263634599ab99380485f6e, type: 2}
-  angeryMaterial: {fileID: 2100000, guid: ee7171859227a3a48bb1c6ec037eb878, type: 2}
+  madMaterial: {fileID: 2100000, guid: ee7171859227a3a48bb1c6ec037eb878, type: 2}
   sadMaterial: {fileID: 2100000, guid: 45178d919761a824290968d54c0c23d6, type: 2}
   lightObject1: {fileID: 800046171}
   lightObject2: {fileID: 672227550}
