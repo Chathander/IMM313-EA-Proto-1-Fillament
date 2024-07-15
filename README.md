@@ -1,7 +1,7 @@
 # IMM313-EK-Proto-1-Fillament
-Contributers: Evan Alexander, Kate Karl
-Course IMM313 / 53-313
-Summer Simester 2, 2024
+Contributers: Evan Alexander, Kate Karl.
+Course IMM313 / 53-313.
+Summer Simester 2, 2024.
 
 ## Summery: 
 This unity project is a exploration in UI and UX interactions within Unity. 
