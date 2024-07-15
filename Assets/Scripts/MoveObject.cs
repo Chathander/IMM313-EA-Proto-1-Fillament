@@ -9,6 +9,7 @@ public class MoveObject : MonoBehaviour
     [SerializeField] private Transform targetTransform;
     [SerializeField] private Transform basePosition;
     public bool inserted;
+    
 
     private void Start()
     {

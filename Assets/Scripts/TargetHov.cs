@@ -12,15 +12,25 @@ public class TargetHov : MonoBehaviour
 /// </summary>
     [SerializeField] private bool isHovered;
     [SerializeField] private UnityEvent _event;
+    [SerializeField] private GameObject highlightObject;
+    //[SerializeField] private ParticleSystem _emotionParticleSystem;
+
+    private void Start()
+    {
+        
+    }
 
     private void OnMouseEnter()
     {
+        //_emotionParticleSystem.Play();
         isHovered = true;
+        highlightObject.SetActive(true);
     }
 
     private void OnMouseExit()
     {
         isHovered = false;
+        highlightObject.SetActive(false);
     }
 
     private void OnMouseDown()
